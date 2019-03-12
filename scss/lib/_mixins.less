@@ -1,18 +1,18 @@
 .not-visible() {
-  top: 50px;
+  top: 0;
   animation-name: modaOut;
   @keyframes modaOut {
   0% {
-      left:(5px);
+      top:195px;
     }
     60% {
-      left:(-10px);
+      top:170px;
     }
     75% {
-      left:(25px);
+      top:210px;
     }
     100% {
-      left:(-3000px);
+      top:-3000px;
     }
   }
   animation-fill-mode: forwards;
@@ -20,23 +20,22 @@
 }
 
 .visible() {
-  top: 50px;
   animation-name: modaIn;
   @keyframes modaIn {
     0% {
-        left:-3000px;
+        top:-3000px;
       }
       60% {
-        left:25px;
+        top: 210px;
       }
       75% {
-        left:-10px;
+        top: 170px;
       }
       90% {
-        left:5px;
+        top: 190px;
       }
       100% {
-        left: 0;
+        top: 185px;
       }
   }
   animation-fill-mode: forwards;
@@ -52,4 +51,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.x-margin {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.y-margin {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.x-padding {
+  padding: 0 @padding-normal 0 @padding-normal;
+}
+
+.y-padding {
+  padding: @padding-normal 0 @padding-normal 0;
+}
+
+.new-height {
+  @height: 5px;
 }

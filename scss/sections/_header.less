@@ -1,0 +1,133 @@
+.header {
+  width: 100vw;
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    @media @phone-landscape {}
+    @media @tablet-portrait {
+      flex-direction: row;
+      background-color: #411C11;
+      justify-content: space-around;
+    }
+    @media @tablet-landscape {
+    }
+    .header-number {
+      height: 30px;
+      background-color: #2D0C04;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media @tablet-portrait {
+        background-color: #411C11;
+      }
+    }
+    .header-facture {
+      height: 30px;
+      background-color: #491507;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media @tablet-portrait {
+        background-color: #411C11;
+      }
+    }
+  }
+  .header-logo {
+    background-color: #592413;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    width: 100vw;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media @tablet-portrait {
+      flex-direction: column;
+      height: 170px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      justify-content: space-between;
+    }
+    @media @website-landscape {
+      height: 175px;
+    }
+    img {
+      position: relative;
+      @media @tablet-portrait {
+        width: 80vw;
+        height: 115px;
+        padding-left: calc(40vw - 52.5px);
+        padding-right: calc(40vw - 52.5px);
+        border-bottom: 1px solid #411C11;
+        padding-bottom: 10px;
+      }
+    }
+    i {
+      position: relative;
+      left: 27vw;
+      top: -20px;
+      font-size: 30px;
+      @media @tablet-portrait {
+        position: static;
+      }
+      @media @website-landscape {
+        display: none;
+      }
+    }
+  }
+  .header-nav {
+    width: 100vw;
+    height: 240px;
+    position: fixed;
+    top: -3000px;
+    background-color: #592413;
+    &.is-active {
+      .visible;
+    }
+    &.not-active {
+      .not-visible;
+    }
+    @media @tablet-portrait {
+      margin-top: 15px;
+    }
+    @media @website-landscape {
+      .visible;
+      margin-top: -25px;
+      top : 150px;
+      height: 50px;
+      &.not-active {
+        .visible;
+      }
+    }
+    ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      @media @website-landscape {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      li {
+        height: 44px;
+        padding-left: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        &.active {
+          background-color: #341207;
+        }
+        @media @website-landscape {
+          padding-right: 30px;
+          border-radius: 10px;
+        }
+        a {
+          color: white;
+          font-family: @font-large-bold;
+        }
+      }
+    }
+  }
+}
