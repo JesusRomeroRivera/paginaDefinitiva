@@ -1,0 +1,45 @@
+.servicios {
+  padding-left: 15px;
+  padding-right: 15px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 25px;
+  background-color: #EEE0DB;
+  @media @tablet-portrait {
+    grid-template-rows: none;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  article {
+    background-color: white;
+    border-radius: 15px;
+    .text {
+      .all-center;
+      flex-direction: column;
+      padding: 35px 10px 20px 10px;
+      h4 {
+        font-family: @font-large-bold;
+        color: #8F4329;
+        margin-bottom: 15px;
+        font-weight: bold;
+      }
+      p {
+        color: #545454;
+        margin-bottom: 15px;
+      }
+      a {
+        border-radius: 10px;
+        background-color: #803C25;
+        .all-center;
+        padding: 15px 20px;
+        i {
+          margin-right: 12.5px;
+        }
+        span {
+          color: white;
+          font-family: @font-large-bold;
+          letter-spacing: 0.8px;
+        }
+      }
+    }
+  }
+}
