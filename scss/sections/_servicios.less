@@ -1,11 +1,13 @@
 .servicios {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px 30px 15px;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-gap: 25px;
   background-color: #EEE0DB;
   @media @tablet-portrait {
+    width: 100vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
     grid-template-rows: none;
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -25,6 +27,7 @@
       p {
         color: #545454;
         margin-bottom: 15px;
+        font-size: 17.5px;
       }
       a {
         border-radius: 10px;
