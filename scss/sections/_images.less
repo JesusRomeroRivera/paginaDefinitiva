@@ -1,0 +1,41 @@
+.images {
+  width: 100vw;
+  height: auto;
+  margin-top: 125px;
+  .images-image {
+    width: 100vw;
+    height: auto;
+    transition: 0.7s;
+    &.primero {
+      background-image: url("../assets/images/back1.jpg");
+      background-size: 100% auto;
+    }
+    &.segundo {
+      background-image: url("../assets/images/back2.jpg");
+      background-size: 100% auto;
+    }
+    .images-container {
+      height: 43vw;
+      padding: 2vw;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      i {
+        font-size: 10px;
+        letter-spacing: 5px;
+        transition: 1s;
+        @media @phone-landscape {
+          font-size: 15px;
+          letter-spacing: 10px;
+        }
+        @media @tablet-portrait {
+          font-size: 20px;
+          letter-spacing: 15px;
+        }
+        &:hover {
+          color: rgba(255,255,255, 0.25);
+        }
+      }
+    }
+  }
+}

@@ -14,3 +14,21 @@ function hideShow() {
     $menu.classList.remove("not-active");
   }
 }
+
+const $images=document.querySelector(".images-image");
+const $first=document.querySelector(".first");
+const $second=document.querySelector(".second");
+
+$first.addEventListener("click",primeraEscena);
+$second.addEventListener("click",segundaEscena);
+
+function primeraEscena() {
+  $images.classList.add("primero");
+  $images.classList.remove("segundo");
+}
+
+function segundaEscena() {
+  $images.classList.remove("primero");
+  $images.classList.add("segundo");
+
+}
